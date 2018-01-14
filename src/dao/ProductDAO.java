@@ -8,6 +8,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.mysql.jdbc.Statement;
+
 import bean.Product;
 
 public class ProductDAO {
@@ -29,7 +31,7 @@ public class ProductDAO {
  
             String sql = "select * from product where id = ?";
  
-            PreparedStatement ps = c.prepareStatement(sql);
+            PreparedStatement ps = c.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
             ps.setInt(1, id);
  
             ResultSet rs = ps.executeQuery();

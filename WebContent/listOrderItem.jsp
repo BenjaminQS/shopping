@@ -10,7 +10,6 @@
         <td>单价</td>
         <td>数量</td>
         <td>小计</td>
-        <td>删除</td>
     </tr>
  
     <c:forEach items="${ois}" var="oi" varStatus="st">
@@ -19,7 +18,15 @@
             <td>${oi.product.price}</td>
             <td>${oi.num}</td>
             <td>${oi.product.price*oi.num}</td>
-            <td><input type="submit" value="删除">
-        </tr>	
+        </tr>
     </c:forEach>
+     
+    <c:if test="${!empty ois}">
+        <tr>
+            <td colspan="4" align="right">
+                <a href="createOrder">生成订单</a>
+            </td>
+        </tr>
+    </c:if>
+     
 </table>

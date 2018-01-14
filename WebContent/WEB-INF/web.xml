@@ -17,19 +17,27 @@
     <url-pattern>/login</url-pattern>
   </servlet-mapping>
   <servlet>
-  	<servlet-name>OrderItemAddServlet</servlet-name>
-   	<servlet-class>servlet.OrderItemAddServlet</servlet-class>
+    <servlet-name>OrderItemAddServlet</servlet-name>
+    <servlet-class>servlet.OrderItemAddServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>OrderItemAddServlet</servlet-name>
+    <servlet-name>OrderItemAddServlet</servlet-name>
     <url-pattern>/addOrderItem</url-pattern>
-  </servlet-mapping>   
+  </servlet-mapping>
   <servlet>
-  	<servlet-name>OrderItemListServlet</servlet-name>
-  	<servlet-class>servlet.OrderItemListServlet</servlet-class>
+    <servlet-name>OrderItemListServlet</servlet-name>
+    <servlet-class>servlet.OrderItemListServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>OrderItemListServlet</servlet-name>
-  	<url-pattern>/listOrderItem</url-pattern>
+    <servlet-name>OrderItemListServlet</servlet-name>
+    <url-pattern>/listOrderItem</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>OrderCreateServlet</servlet-name>
+  	<servlet-class>servlet.OrderCreateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>OrderCreateServlet</servlet-name>
+    <url-pattern>/createOrder</url-pattern>
   </servlet-mapping>
 </web-app>
